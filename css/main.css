@@ -5,19 +5,24 @@
 
 html, body {
     background-color: rgb(14, 23, 31);
+    
 }
 
 
 #map-dark {
-    position: fixed;
-    left: 639px;
+    position: absolute;
+    left: 555px;
     display: block;
     margin: auto;
-    margin-top: 3rem;
+    margin-top: 2.1rem;
     pointer-events: none;
-    width: 70em;
+    width: 80em;
     float: right;
+    z-index: 0;
+    zoom: 1;
 }
+
+
 
 #map-bright {
     position: fixed;
@@ -48,6 +53,7 @@ html, body {
     width: 80%;
     border-radius: 2rem;
     margin: auto;
+    z-index: 3;
 }
 
 #airlines,#dep,#arr {
@@ -75,6 +81,7 @@ html, body {
     transition-duration: 200ms;
 }
 
+
 #submit:active{
     color:rgb(14, 23, 31);
 }
@@ -90,6 +97,7 @@ html, body {
     border-radius: 2em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 100;
+    z-index: 6;
 
 
 }
@@ -97,23 +105,33 @@ html, body {
     color: #fff;
     line-height: 3em;
     list-style: circle;
+    z-index: 6;
+}
+
+#canvas {
+    position: absolute;
+    margin-left:0;
+    pointer-events: none;
+
+    z-index: 1;
     
+
 }
 
 #ESSA {
     height: 6px;
     width: 6px;
-    position: fixed;
+    position: absolute;
     left: 1238px;
     top: 270px;
     background-color: rgb(255, 0, 0);
-    border-radius: 50%;
     display: inline-block;
+    border-radius: 50%;
 }
 #EFHK {
     height: 6px;
     width: 6px;
-    position: fixed;
+    position: absolute;
     left: 1262px;
     top: 264px;
     background-color: red;
@@ -124,7 +142,7 @@ html, body {
 #EGKK {
     height: 6px;
     width: 6px;
-    position: fixed;
+    position: absolute;
     left: 1184px;
     top: 292px;
     background-color: rgb(255, 0, 0);
@@ -132,13 +150,66 @@ html, body {
     display: inline-block;
 }
 
+#LIRN {
+    height: 6px;
+    width: 6px;
+    position: absolute;
+    left: 1236px;
+    top: 338px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%;
+    display: inline-block;
+}
 #EHAM {
     height: 6px;
     width: 6px;
-    position: fixed;
+    position: absolute;
     left: 1207px;
     top: 292px;
     background-color: rgb(255, 0, 0);
     border-radius: 50%;
     display: inline-block;
+}
+#KORD {
+    height: 6px;
+    width: 6px;
+    position: absolute;
+    left: 867px;
+    top: 328px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#KLAX {
+    height: 6px;
+    width: 6px;
+    position: absolute;
+    left: 760px;
+    top: 360px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#KLAS {
+    height: 6px;
+    width: 6px;
+    position: absolute;
+    left: 775px;
+    top: 350px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#ENGM {
+    height: 6px;
+    width: 6px;
+    position: absolute;
+    left: 1220px;
+    top: 270px;
+    background-color: rgb(255, 0, 0);
+    display: inline-block;
+    border-radius: 50%;
 }

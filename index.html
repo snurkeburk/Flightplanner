@@ -9,12 +9,13 @@
     <title>Flightplanner</title>
 </head>
 <body>
+    <canvas id="canvas" height="1080" width="1920"></canvas>
     <div class="div">
-    <div class="input-container">
+        <div class="input-container">
         <label for="fname">Departure airport</label>
-        <input type="text" id="dep" name="dep" placeholder="ICAO"><br><br>
+        <input type="text" id="dep" value="ESSA" name="dep" placeholder="ICAO"><br><br>
         <label for="fname">Arrival airport</label>
-        <input type="text" id="arr" name="dep" placeholder="ICAO"><br><br>
+        <input type="text" id="arr" value="EGKK" name="dep" placeholder="ICAO"><br><br>
         <label for="cars">Airline</label>
         <select name="airlines" id="airlines">
             <option value="SAS">SAS</option>
@@ -22,18 +23,24 @@
             <option value="Nor">Norweigan airlines</option>
             <option value="SWISS">SWISS</option>
         </select>
-        
         <button onclick="test()" id="submit">&#10003;</button>
+        <button onclick="randomRoute()" id="random">&#10003;</button>
     </div>
     </div>
-    
-        <img id="map-dark" src="/pictures/map-dark.png" >
-        <img id="map-bright" src="/pictures/map-bright.png">
+        <img alt="dark-map" id="map-dark" src="/pictures/map-dark.png" >
+        <img alt="bright-map" id="map-bright" src="/pictures/map-bright.png">
     <div class="dots">
-        <span id="ESSA"></span>
+            <rect width="10" height ="10" id="ESSA"></rect>
         <span id="EFHK"></span>
         <span id="EGKK"></span>
         <span id="EHAM"></span>
+        <span id="KORD"></span>
+        <span id="KLAX"></span>
+        <span id="KLAS"></span>
+        <span id="ENGM"></span>
+        <span id="LIRN"></span>
+
+
 
 
     </div>
@@ -46,10 +53,19 @@
             <li>EGKK - Storbritannien - Gatwick</li>
             <li>ENGM - Norge - Oslo</li>
             <li>ESSB - Sverige - Bromma</li>
+            <li>KLAX - Los Angeles</li>
+            <li>KLAS - Las Vegas</li>
+            <li>LIRN - Napels International</li>
+
+
+
+
         </ul>
         
 
     </section>
 
 </body>
+<script src="/javascript/main.js"></script>
+
 </html>
