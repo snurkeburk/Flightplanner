@@ -86,6 +86,31 @@ html, body {
     color:rgb(14, 23, 31);
 }
 
+#random {
+    width: 3vw;
+    height: 6vh;
+    font-size: 2vw;
+    color: rgb(255, 231, 93);
+    
+    background: none;
+    border-style: double;
+    border-radius: 2em;
+    border-color:rgb(255, 238, 0);
+    margin-left: 2em;
+}
+
+#random:hover {
+    cursor: pointer;
+    background-color: rgba(0, 137, 250, 0.199);
+    transition-duration: 200ms;
+}
+
+
+#random:active{
+    color:rgb(14, 23, 31);
+}
+
+
 .airport-list {
     display: flex;
     padding: 2em;

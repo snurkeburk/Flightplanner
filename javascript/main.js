@@ -1,6 +1,6 @@
 //import selected route from route.js and draw line between dots
 
-let airports = ['ESSA','ESSB','ENGM','KORD', 'EHAM','EGKK','KLAS','KLAX','LIRN','EFHK'];
+let airports = ['ESSA','ENGM','KORD', 'EHAM','EGKK','KLAS','KLAX','LIRN','EFHK'];
 
 function test() {
 var depname = document.getElementById("dep").value;
@@ -84,8 +84,13 @@ function randomRoute() {
     var arrival = airports[randomArrival];
     document.getElementById('arr').value = arrival;
     document.getElementById(arrival).style.backgroundColor = "lightgreen";   
+    console.log(departure, arrival);
+    if (arrival == departure){
+        randomRoute();
+    } else {
+        rect();
 
-    rect();
+    }
 }
 
 
