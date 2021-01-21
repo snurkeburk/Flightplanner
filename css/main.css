@@ -20,10 +20,14 @@ html, body {
 }
 
 #map-bright {
+    position: fixed;
+    left: 639px;
     display: none;
     margin: auto;
-    margin-top: 10rem;
+    margin-top: 3rem;
     pointer-events: none;
+    width: 70em;
+    float: right;
 }
 
 .div {
@@ -52,6 +56,7 @@ html, body {
     margin-left: 1rem;
     width: 8vw;
 }
+
 
 #submit {
     width: 3vw;
@@ -111,7 +116,7 @@ html, body {
     position: fixed;
     left: 1262px;
     top: 264px;
-    background-color: rgb(255, 0, 0);
+    background-color: red;
     border-radius: 50%;
     display: inline-block;
 }
