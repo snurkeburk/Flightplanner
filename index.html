@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Flightplanner</title>
+</head>
+<body>
+    <div class="div">
+    <div class="input-container">
+        <label for="fname">Departure airport</label>
+        <input type="text" id="dep" name="dep" placeholder="ICAO"><br><br>
+        <label for="fname">Arrival airport</label>
+        <input type="text" id="arr" name="dep" placeholder="ICAO"><br><br>
+        <label for="cars">Airline</label>
+        <select name="airlines" id="airlines">
+            <option value="SAS">SAS</option>
+            <option value="KLM">KLM</option>
+            <option value="Nor">Norweigan airlines</option>
+            <option value="SWISS">SWISS</option>
+        </select>
+        
+        <button id="submit">&#10003;</button>
+    </div>
+    </div>
+    
+        <img id="map-dark" src="/pictures/map-dark.png" >
+        <img id="map-bright" src="/pictures/map-bright.png">
+    <div class="dots">
+        <span id="ESSA"></span>
+        <span id="EFHK"></span>
+        <span id="EGKK"></span>
+        <span id="EHAM"></span>
+
+    </div>
+    <section class="airport-list">
+        <ul>
+            <li>ESSA - Sverige - Arlanda</li>
+            <li>EFHK - Finland - Helsinki</li>
+            <li>KORD - Chicago - O'hare international</li>
+            <li>EHAM - Amsterdam </li>
+            <li>EGKK - Storbritannien - Gatwick</li>
+            <li>ENGL - Norge - Oslo</li>
+            <li>ESSB - Sverige - Bromma</li>
+        </ul>
+        
+
+    </section>
+
+</body>
+</html>
