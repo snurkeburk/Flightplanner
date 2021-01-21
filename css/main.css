@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background-color: rgb(14, 23, 31);
+}
+
+
+#map-dark {
+    position: fixed;
+    left: 639px;
+    display: block;
+    margin: auto;
+    margin-top: 3rem;
+    pointer-events: none;
+    width: 70em;
+    float: right;
+}
+
+#map-bright {
+    display: none;
+    margin: auto;
+    margin-top: 10rem;
+    pointer-events: none;
+}
+
+.div {
+    padding: 1em;
+}
+
+.input-container {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    font-size: 1.3rem;
+    padding: 1em;
+    color: #fff;
+    background-color: rgba(6, 95, 122, 0.568);
+    width: 80%;
+    border-radius: 2rem;
+    margin: auto;
+}
+
+#airlines,#dep,#arr {
+    padding: 0.3vw;
+    margin-right: 2rem;
+    margin-left: 1rem;
+    width: 8vw;
+}
+
+#submit {
+    width: 3vw;
+    height: 6vh;
+    font-size: 2vw;
+    color: rgb(162, 253, 109);
+    background: none;
+    border-style: double;
+    border-radius: 2em;
+    border-color:rgb(50, 252, 50);
+}
+
+#submit:hover {
+    cursor: pointer;
+    background-color: rgba(71, 250, 0, 0.199);
+    transition-duration: 200ms;
+}
+
+#submit:active{
+    color:rgb(14, 23, 31);
+}
+
+.airport-list {
+    display: flex;
+    padding: 2em;
+    margin-top: 1em;
+    background-color: rgba(6, 95, 122, 0.568);
+    width: 17em;
+    height: 40em;
+    margin-left: 9.6vw;
+    border-radius: 2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+
+
+}
+.airport-list ul li {
+    color: #fff;
+    line-height: 3em;
+    list-style: circle;
+    
+}
+
+#ESSA {
+    height: 6px;
+    width: 6px;
+    position: fixed;
+    left: 1238px;
+    top: 270px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%;
+    display: inline-block;
+}
+#EFHK {
+    height: 6px;
+    width: 6px;
+    position: fixed;
+    left: 1262px;
+    top: 264px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#EGKK {
+    height: 6px;
+    width: 6px;
+    position: fixed;
+    left: 1184px;
+    top: 292px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#EHAM {
+    height: 6px;
+    width: 6px;
+    position: fixed;
+    left: 1207px;
+    top: 292px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%;
+    display: inline-block;
+}
