@@ -90,13 +90,13 @@ if (divsecondOffset.left < divOffset.left){
 
 if (c > 300){
     var cp2y = divsecondOffset.top - c + 500;
+}
+if (c < 70){
+    var cp2y = divsecondOffset.top - c ;
 
 }
-/*if (r == 0){
-} else if (r >= 1){
-    var cp2x = divsecondOffset.left + c/2;
-    var cp2y = divsecondOffset.top - c;
-}*/
+
+
 console.log("R = " + r)
 
 ctx.bezierCurveTo(cp1x, cp1y,cp2x,cp2y,divsecondOffset.left,divsecondOffset.top)
@@ -124,6 +124,7 @@ function randomRoute() {
             //plus 1 på getBoundingClientRect och på ctx.stroke
     }
 }
+
 
 
 //dark mode 
