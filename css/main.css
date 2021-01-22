@@ -8,6 +8,14 @@ html, body {
     
 }
 
+#logo {
+    display: block;
+    position: absolute;
+    width: 13rem;
+    padding: 0.2rem;
+    float: left;
+    margin-left: -1rem;
+}
 
 #map-dark {
     position: absolute;
@@ -32,6 +40,17 @@ html, body {
     margin-top: 3rem;
     pointer-events: none;
     width: 70em;
+    float: right;
+}
+
+#grid {
+    position: absolute;
+    left: 590px;
+    display: block;
+    margin: auto;
+    margin-top: -1rem;
+    pointer-events: none;
+    width: 90em;
     float: right;
 }
 
@@ -120,16 +139,16 @@ html, body {
     height: 40em;
     margin-left: 9.6vw;
     border-radius: 2em;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 100;
+    font-family: 'Franklin Gothic Medium';
+    font-weight: 0;
     z-index: 6;
 
 
 }
 .airport-list ul li {
     color: #fff;
-    line-height: 3em;
-    list-style: circle;
+    line-height: 2.2em;
+    list-style: inside;
     z-index: 6;
 }
 
@@ -143,13 +162,14 @@ html, body {
 
 }
 
+
 #ESSA {
     height: 6px;
     width: 6px;
     position: absolute;
     left: 1238px;
     top: 270px;
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(0, 204, 255);
     display: inline-block;
     border-radius: 50%;
 }
@@ -159,7 +179,7 @@ html, body {
     position: absolute;
     left: 1262px;
     top: 264px;
-    background-color: red;
+    background-color: rgb(0, 204, 255);
     border-radius: 50%;
     display: inline-block;
 }
@@ -170,7 +190,7 @@ html, body {
     position: absolute;
     left: 1184px;
     top: 292px;
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(0, 204, 255);
     border-radius: 50%;
     display: inline-block;
 }
@@ -181,7 +201,7 @@ html, body {
     position: absolute;
     left: 1236px;
     top: 338px;
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(0, 204, 255);
     border-radius: 50%;
     display: inline-block;
 }
@@ -191,7 +211,7 @@ html, body {
     position: absolute;
     left: 1207px;
     top: 292px;
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(0, 204, 255);
     border-radius: 50%;
     display: inline-block;
 }
@@ -201,7 +221,7 @@ html, body {
     position: absolute;
     left: 867px;
     top: 328px;
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(0, 204, 255);
     border-radius: 50%;
     display: inline-block;
 }
@@ -212,7 +232,7 @@ html, body {
     position: absolute;
     left: 760px;
     top: 360px;
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(0, 204, 255);
     border-radius: 50%;
     display: inline-block;
 }
@@ -223,7 +243,7 @@ html, body {
     position: absolute;
     left: 775px;
     top: 350px;
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(0, 204, 255);
     border-radius: 50%;
     display: inline-block;
 }
@@ -234,7 +254,73 @@ html, body {
     position: absolute;
     left: 1220px;
     top: 270px;
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(0, 204, 255);
+    display: inline-block;
+    border-radius: 50%;
+}
+
+#ZBAA {
+    height: 6px;
+    width: 6px;
+    position: absolute;
+    left: 1600px;
+    top: 339px;
+    background-color: rgb(0, 204, 255);
+    display: inline-block;
+    border-radius: 50%;
+}
+
+#OMDB {
+    height: 6px;
+    width: 6px;
+    position: absolute;
+    left: 1382px;
+    top: 395px;
+    background-color: rgb(0, 204, 255);
+    display: inline-block;
+    border-radius: 50%;
+}
+
+#RJTT {
+    height: 6px;
+    width: 6px;
+    position: absolute;
+    left: 1685px;
+    top: 350px;
+    background-color: rgb(0, 204, 255);
+    display: inline-block;
+    border-radius: 50%;
+}
+
+#LFPG {
+    height: 6px;
+    width: 6px;
+    position: absolute;
+    left: 1190px;
+    top: 305px;
+    background-color: rgb(0, 204, 255);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#VHHH {
+    height: 6px;
+    width: 6px;
+    position: absolute;
+    left: 1590px;
+    top: 400px;
+    background-color: rgb(0, 204, 255);
+    display: inline-block;
+    border-radius: 50%;
+}
+
+#VIDP {
+    height: 6px;
+    width: 6px;
+    position: absolute;
+    left: 1460px;
+    top: 395px;
+    background-color: rgb(0, 204, 255);
     display: inline-block;
     border-radius: 50%;
 }

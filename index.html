@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="css/main.css">
     <script src="/javascript/main.js"></script>
 
     <title>Flightplanner</title>
 </head>
 <body>
-    
+    <header>
+        <img alt="logo-globe" src="pictures/logo-white.png" id="logo">
+    </header>
     <canvas id="canvas" height="1080" width="1920"></canvas>
     <div class="div">
         <div class="input-container">
         <label for="fname">Departure airport</label>
-        <input type="text" id="dep" name="dep" placeholder="ICAO"><br><br>
+        <input type="text" id="dep" value = "KLAX" name="dep" placeholder="ICAO"><br><br>
         <label for="fname">Arrival airport</label>
-        <input type="text" id="arr" name="dep" placeholder="ICAO"><br><br>
+        <input type="text" id="arr" value="VHHH" name="dep" placeholder="ICAO"><br><br>
         <label for="cars">Airline</label>
         <select name="airlines" id="airlines">
             <option value="SAS">SAS</option>
@@ -29,10 +31,11 @@
         <button onclick="randomRoute()" id="random">&#9992;</button>
     </div>
     </div>
+        <img alt="grid" id="grid" src="pictures/grid.png">
         <img alt="dark-map" id="map-dark" src="/pictures/map-dark.png" >
         <img alt="bright-map" id="map-bright" src="/pictures/map-bright.png">
     <div class="dots">
-            <rect width="10" height ="10" id="ESSA"></rect>
+        <rect width="10" height ="10" id="ESSA"></rect>
         <span id="EFHK"></span>
         <span id="EGKK"></span>
         <span id="EHAM"></span>
@@ -41,6 +44,17 @@
         <span id="KLAS"></span>
         <span id="ENGM"></span>
         <span id="LIRN"></span>
+        <span id="ZBAA"></span>
+        <span id="OMDB"></span>
+        <span id="RJTT"></span>
+        <span id="LFPG"></span>
+        <span id="VHHH"></span>
+        <span id="VIDP"></span>
+        <span id="LEMD"></span>
+        <span id="LEBL"></span>
+        <span id="LTBW"></span>
+
+
 
 
 
@@ -56,7 +70,15 @@
             <li>ENGM - Norge - Oslo</li>
             <li>KLAX - Los Angeles</li>
             <li>KLAS - Las Vegas</li>
-            <li>LIRN - Napels International</li>
+            <li>ZBAA - Napels International</li>
+            <li>OMDB - Napels International</li>
+            <li>RJTT - Napels International</li>
+            <li>VHHH - Napels International</li>
+            <li>VIDP - Napels International</li>
+            <li>LEMD - Napels International</li>
+            <li>LEBL - Napels International</li>
+            <li>LTBW - Napels International</li>
+
 
 
 
