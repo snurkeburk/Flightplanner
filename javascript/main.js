@@ -4,7 +4,9 @@ let airports = ['ESSA','ENGM','KORD', 'EHAM','EGKK','KLAS',
                 'KLAX','LIRN','EFHK','ZBAA','OMDB','RJTT','LFPG',
                 'VHHH','VIDP'];
 
-function test() {
+
+//function accepting route inputs then drawing them using rect()
+function route() {
 var depname = document.getElementById("dep").value;
 var brightMap = document.getElementById("map-bright");
 var darkMap = document.getElementById("map-dark");
@@ -14,7 +16,7 @@ while(i < airports.length){
     var arrname = document.getElementById("arr").value;
 
     colorChange();
-
+    //searching for a match within the airport array
     if (airports[i] == depname){
         console.log(depname);
         i = 0;
@@ -25,15 +27,14 @@ while(i < airports.length){
             document.getElementById(arrname).style.backgroundColor = "lightgreen";
 
         } else {
-            console.log("arrival not found, trying again...")
-            i = i+1;
+            console.log("arrival not found, trying again...") //airport "i" not found, i+1 for next one
+            i = i+1; 
         }
     }
         rect();
         i = airports.length;
         document.getElementById(depname).style.backgroundColor = "lightgreen";
 
-        //get coords
     } else {
         console.log("departure not found, trying again...");
         i = i+1;
@@ -42,12 +43,14 @@ while(i < airports.length){
 }
 }
 
+//function for color changing
 function colorChange(){
     var depname = document.getElementById("dep").value;
     var arrname = document.getElementById("arr").value;
 
 }
 
+//function to create offsets for path
 function offset(el) {
     var rect = el.getBoundingClientRect(),
     scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
@@ -55,7 +58,8 @@ function offset(el) {
     return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
 }
 
-// example use
+
+// function to draw the paths
 function rect(){
 var depname = document.getElementById('dep').value;
 var arrname = document.getElementById("arr").value;
@@ -74,12 +78,13 @@ ctx.beginPath();
 var a = divOffset.left - divsecondOffset.left;
 var b = divOffset.top - divsecondOffset.top;
 
-var c = Math.sqrt( a*a + b*b );
+var c = Math.sqrt( a*a + b*b ); // distance between airports
 
 var cp1x = divOffset.left + 0;
 var cp1y = divOffset.top + 0;
 console.log("C = " + c)
-var r = Math.floor(Math.random() * 2);
+
+// depending on which airport is more / less to left --> postive / neg curve
 if (divsecondOffset.left < divOffset.left){
     var cp2x = divsecondOffset.left + c/2;
     var cp2y = divsecondOffset.top + c - 100;
@@ -87,6 +92,8 @@ if (divsecondOffset.left < divOffset.left){
     var cp2x = divsecondOffset.left - c/2;
     var cp2y = divsecondOffset.top - c + 100;
 }
+
+//depending on distance --> change max-height on curve
 
 if (c > 300){
     var cp2y = divsecondOffset.top - c + 500;
@@ -97,16 +104,32 @@ if (c < 70){
 }
 
 
-console.log("R = " + r)
 
 ctx.bezierCurveTo(cp1x, cp1y,cp2x,cp2y,divsecondOffset.left,divsecondOffset.top)
 ctx.moveTo(divsecondOffset.left, divsecondOffset.top);
 //ctx.lineTo(divOffset.left, divOffset.top);
-ctx.stroke();
 
+// show values in "devbox"
+let printx1 = document.getElementById('coordsx1');
+let printdep = document.getElementById('dev-dep');
+let printarr = document.getElementById('dev-arr');
+let printy1 = document.getElementById('coordsy1');
+let printx2 = document.getElementById('coordsx2');
+let printy2 = document.getElementById('coordsy2');
+let printc = document.getElementById('c-value');
+
+printdep.innerHTML = depname;
+printarr.innerHTML = arrname;
+printx1.innerHTML = divOffset.left;
+printy1.innerHTML = divOffset.top;
+printx2.innerHTML = divsecondOffset.left;
+printy2.innerHTML = divsecondOffset.top;
+printc.innerHTML = c;
+
+ctx.stroke();
 }
 
-
+//function for generating random routes
 function randomRoute() {
     var randomDeparture = Math.floor(Math.random() * airports.length);
     var departure = airports[randomDeparture];
@@ -117,16 +140,11 @@ function randomRoute() {
     document.getElementById('arr').value = arrival;
     document.getElementById(arrival).style.backgroundColor = "lightgreen";   
     console.log(departure, arrival);
-    if (arrival == departure){
+    if (arrival == departure){ //checks for doublicates
         randomRoute();
     } else {
         rect();
-            //plus 1 på getBoundingClientRect och på ctx.stroke
+        
     }
 }
 
-
-
-//dark mode 
-//            darkMap.style.display = "none";
-//            brightMap.style.display = "block";

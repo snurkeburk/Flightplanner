@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <script src="/javascript/main.js"></script>
+    <script src="javascript/main.js"></script>
 
     <title>Flightplanner</title>
 </head>
 <body>
-    <header>
+    <header class="logo-header">
         <img alt="logo-globe" src="pictures/logo-white.png" id="logo">
     </header>
     <canvas id="canvas" height="1080" width="1920"></canvas>
     <div class="div">
         <div class="input-container">
-        <label for="fname">Departure airport</label>
+        <label for="dep">Departure airport</label>
         <input type="text" id="dep" value = "ESSA" name="dep" placeholder="ICAO"><br><br>
-        <label for="fname">Arrival airport</label>
-        <input type="text" id="arr" value="EFHK" name="dep" placeholder="ICAO"><br><br>
+        <label for="arr">Arrival airport</label>
+        <input type="text" id="arr" value="EFHK" name="arr" placeholder="ICAO"><br><br>
         <label for="cars">Airline</label>
         <select name="airlines" id="airlines">
             <option value="SAS">SAS</option>
@@ -27,13 +27,19 @@
             <option value="SWISS">SWISS</option>
         </select>
         
-        <button onclick="test()" id="submit">&#10003;</button>
+        <button onclick="route()" id="submit">&#10003;</button>
         <button onclick="randomRoute()" id="random">&#9992;</button>
+
+        </div>
     </div>
-    </div>
+
+    <div class="map-grid">
         <img alt="grid" id="grid" src="pictures/grid.png">
         <img alt="dark-map" id="map-dark" src="pictures/map-dark.png" >
         <img alt="bright-map" id="map-bright" src="pictures/map-bright.png">
+    </div>
+
+
     <div class="dots">
         <rect width="10" height ="10" id="ESSA"></rect>
         <span id="EFHK"></span>
@@ -53,13 +59,31 @@
         <span id="LEMD"></span>
         <span id="LEBL"></span>
         <span id="LTBW"></span>
-
-
-
-
-
-
     </div>
+    
+    <section class="tools"> 
+        <ul>
+        <li>switch</li>
+        <li>help</li>
+        <li>clear</li>
+        <li>showcoords</li>
+        </ul>
+    </section>
+    <section class="dev">
+        <ul class="ul-dep">
+            <li id="dev-dep">[XXXX]</li>
+            <li id="coordsx1">X1</li>
+            <li id="coordsy1">Y1</li>
+            <li id="c-value">C</li>
+        </ul>
+        <ul class="ul-arr">
+            <li id="dev-arr">[XXXX]</li>
+            <li id="coordsx2">X2</li>
+            <li id="coordsy2">Y2</li>
+        </ul>
+
+    </section>
+
     <section class="airport-list">
         <ul>
             <li>ESSA - Sverige - Arlanda</li>
@@ -70,18 +94,14 @@
             <li>ENGM - Norge - Oslo</li>
             <li>KLAX - Los Angeles</li>
             <li>KLAS - Las Vegas</li>
-            <li>ZBAA - Napels International</li>
-            <li>OMDB - Napels International</li>
-            <li>RJTT - Napels International</li>
-            <li>VHHH - Napels International</li>
-            <li>VIDP - Napels International</li>
-            <li>LEMD - Napels International</li>
-            <li>LEBL - Napels International</li>
-            <li>LTBW - Napels International</li>
-
-
-
-
+            <li>ZBAA - Beijing Capital international</li>
+            <li>OMDB - Dubai international </li>
+            <li>RJTT - Henada - Tokyo international</li>
+            <li>VHHH - HongKong international</li>
+            <li>VIDP - Indira Ghandi international</li>
+            <li>LEMD - Madrid - Adolfo Suárez </li>
+            <li>LEBL - Barcelona</li>
+            <li>LTBW - Hezarfen - Istanbul</li>
 
         </ul>
         
