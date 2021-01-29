@@ -139,6 +139,15 @@ if (c > 600) {
             var aa = divOffset.left - newdivsecondOffset.left;
             var ba = divOffset.top - newdivsecondOffset.top;
             var ca = Math.sqrt( aa*aa + ba*ba );
+            
+            var ab = divOffset.left - newdivsecondOffset.left;
+            var bb = divOffset.top - newdivsecondOffset.top;
+            var cb = Math.sqrt( ab*ab + bb*bb );
+            console.log("cb = " + cb);
+            if (cb > 500){
+                i = i +1 ;
+                console.log("cb > 500");
+            } else {
             var newcp1x = newdivOffset.left + 0;
             var newcp1y = newdivOffset.top + 0;
             var newcp2x = newdivsecondOffset.left + ca/2;
@@ -161,18 +170,14 @@ if (c > 600) {
             div = document.getElementById(newarrname);
             divOffset = offset(div);
 
-            var ab = divOffset.left - newdivsecondOffset.left;
-            var bb = divOffset.top - newdivsecondOffset.top;
-            var cb = Math.sqrt( ab*ab + bb*bb );
-            console.log("cb = " + cb);
 
             var newcp2x = newdivsecondOffset.left + cb/2;
             var newcp2y = newdivsecondOffset.top - 0;
-            
+          
             ctx.bezierCurveTo(newcp2x, newcp2y,newcp2x,newcp2y,newdivsecondOffset.left,newdivsecondOffset.top)
             ctx.moveTo(newdivsecondOffset.left, newdivsecondOffset.top);
-
             i = airports.length;
+        }
             
             } 
 
@@ -193,7 +198,14 @@ if (c > 600) {
             var newcp2y = newdivsecondOffset.top + c - 700;
             console.log(newdivsecondOffset.left, newdivsecondOffset.top);
             console.log(newdivOffset.left, newdivOffset.top);
-
+            var ab = divOffset.left - newdivsecondOffset.left;
+            var bb = divOffset.top - newdivsecondOffset.top;
+            var cb = Math.sqrt( ab*ab + bb*bb );
+            console.log("cb = " + cb);
+            if (cb > 500){
+                i = i + 1;
+                console.log("cb > 500");
+            } else { 
             ctx.beginPath();
             ctx.strokeStyle = "lightgreen";
             ctx.setLineDash([5, 5]);
@@ -207,21 +219,13 @@ if (c > 600) {
             newdivsecond = document.getElementById(arrname);   
             newdivsecondOffset = offset(newdivsecond);
             div = document.getElementById(newarrname);
-            divOffset = offset(div);
-
-            var ab = divOffset.left - newdivsecondOffset.left;
-            var bb = divOffset.top - newdivsecondOffset.top;
-            var cb = Math.sqrt( ab*ab + bb*bb );
-            console.log("cb = " + cb);
-
+            divOffset = offset(div);         
             var newcp2x = newdivsecondOffset.left - cb/2;
             var newcp2y = newdivsecondOffset.top - 0;
-            
-            ctx.bezierCurveTo(newcp2x, newcp2y,newcp2x,newcp2y,newdivsecondOffset.left,newdivsecondOffset.top)
-            ctx.moveTo(newdivsecondOffset.left, newdivsecondOffset.top);
-
-            i = airports.length;
-
+                ctx.bezierCurveTo(newcp2x, newcp2y,newcp2x,newcp2y,newdivsecondOffset.left,newdivsecondOffset.top)
+                ctx.moveTo(newdivsecondOffset.left, newdivsecondOffset.top);             
+                i = airports.length;        
+            }
 
             }
         } else {
@@ -229,6 +233,8 @@ if (c > 600) {
             
         }
     }
+
+
 
 // show values in "devbox"
 let printx1 = document.getElementById('coordsx1');
@@ -238,6 +244,14 @@ let printy1 = document.getElementById('coordsy1');
 let printx2 = document.getElementById('coordsx2');
 let printy2 = document.getElementById('coordsy2');
 let printc = document.getElementById('c-value');
+let printx1Big = document.getElementById('coordsx1-big');
+let printdepBig = document.getElementById('dev-dep-big');
+let printarrBig = document.getElementById('dev-arr-big');
+let printy1Big = document.getElementById('coordsy1-big');
+let printx2Big = document.getElementById('coordsx2-big');
+let printy2Big = document.getElementById('coordsy2-big');
+let printcBig = document.getElementById('c-value-big');
+
 printdep.innerHTML = depname;
 printarr.innerHTML = arrname;
 printx1.innerHTML = divOffset.left;
@@ -245,6 +259,13 @@ printy1.innerHTML = divOffset.top;
 printx2.innerHTML = divsecondOffset.left;
 printy2.innerHTML = divsecondOffset.top;
 printc.innerHTML = c;
+printdepBig.innerHTML = depname;
+printarrBig.innerHTML = arrname;
+printx1Big.innerHTML = divOffset.left;
+printy1Big.innerHTML = divOffset.top;
+printx2Big.innerHTML = divsecondOffset.left;
+printy2Big.innerHTML = divsecondOffset.top;
+printcBig.innerHTML = c;
 ctx.stroke();
 
 }

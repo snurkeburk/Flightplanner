@@ -203,7 +203,36 @@ html, body {
     line-height: 2.2em;
     list-style: none;
     z-index: 6;
+}
 
+.show-tools{
+    display: flex;
+    justify-content: space-between;
+    grid-row: 3;
+    flex-direction: row;
+    margin-top: -10em;
+    grid-column: 3;
+    padding: 2em;
+    background-color: rgba(22, 147, 185, 0.226);
+    width: 40em;
+    height: 10em;
+    margin-left: 1vw;
+    border-radius: 2em;
+    font-family: 'Franklin Gothic Medium';
+    font-weight: 0;
+    z-index: 10;
+    margin-right: 2rem;
+}
+
+.show-tools ul li {
+    color: #fff;
+    line-height: 2.2em;
+    list-style: none;
+    z-index: 6;
+}
+
+.main-div-tools{
+    text-align: center;
 }
 
 #myDiv{

@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <script src="scripts/main.js"></script>
-    <script src="scripts/scraper.js"></script>
-    <title>Flightplanner</title>
+    <script src="scripts/cookies.js"></script>
+        <title>Flightplanner</title>
 </head>
 <body>
-       
+
     
     <header class="logo-header">
         <img alt="logo-globe" src="pictures/logo-white.png" id="logo">
@@ -20,7 +20,7 @@
         <label for="dep">Departure airport</label>
         <input type="text" id="dep" value = "KLAS" name="dep" placeholder="ICAO"><br><br>
         <label for="arr">Arrival airport</label>
-        <input type="text" id="arr" value="RJTT" name="arr" placeholder="ICAO"><br><br>
+        <input type="text" id="arr" value="VIDP" name="arr" placeholder="ICAO"><br><br>
         <label for="cars">Airline</label>
         <select name="airlines" id="airlines">
             <option value="SAS">SAS</option>
@@ -67,9 +67,35 @@
         <ul>
         <li>switch</li>
         <li>help</li>
-        <li>clear</li>
-        <li>showcoords</li>
+        <button>clear</button>
+        <button>hide coords</button>
         </ul>
+    </section>
+    <section class="show-tools">
+        <ul class="ul-dep-big">
+            <li id="show-tools-exp">Departure</li>
+            <li id="dev-dep-big">[XXXX]</li>
+            <li id="coordsx1-big">X1</li>
+            <li id="coordsy1-big">Y1</li>
+            <li id="c-value-big">C</li>
+        </ul>
+    <div class="main-div-tools">
+        <ul>
+            <li>----------------------------------------------</li>
+            <li>ICAO</li>
+            <li>x-coordinates (in px)</li>
+            <li>y-coordinates (in px)</li>
+            <li>distance between (in px)</li>
+        </ul>
+
+    </div>
+        <ul class="ul-arr-big">
+            <li class="show-tools-exp">Arrival</li>
+            <li id="dev-arr-big">[XXXX]</li>
+            <li id="coordsx2-big">X2</li>
+            <li id="coordsy2-big">Y2</li>
+        </ul>
+
     </section>
     <section class="dev">
         <ul class="ul-dep">
@@ -85,6 +111,7 @@
         </ul>
 
     </section>
+
 
     <section class="airport-list">
         <ul>
