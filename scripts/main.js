@@ -144,7 +144,7 @@ if (c > 600) {
             var bb = divOffset.top - newdivsecondOffset.top;
             var cb = Math.sqrt( ab*ab + bb*bb );
             console.log("cb = " + cb);
-            if (cb > 500){
+            if (cb > c/2){
                 i = i +1 ;
                 console.log("cb > 500");
             } else {
@@ -202,7 +202,7 @@ if (c > 600) {
             var bb = divOffset.top - newdivsecondOffset.top;
             var cb = Math.sqrt( ab*ab + bb*bb );
             console.log("cb = " + cb);
-            if (cb > 500){
+            if (cb > c/2){
                 i = i + 1;
                 console.log("cb > 500");
             } else { 
