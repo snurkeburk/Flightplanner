@@ -185,12 +185,14 @@ html, body {
 
 .tools {
     display: flex;
+
     grid-row: 2;
     grid-column: 1;
-    padding: 2em;
+    padding: 0em;
     margin-top: 1em;
     background-color: rgba(22, 147, 185, 0.226);
-    width: 6em;
+    width: 5em;
+    padding: 1rem;
     height: 10em;
     margin-left: 1vw;
     border-radius: 2em;
@@ -198,14 +200,32 @@ html, body {
     font-weight: 0;
     z-index: 6;
 }
-.tools ul li {
+.tools ul {
     color: #fff;
     line-height: 2.2em;
     list-style: none;
     z-index: 6;
+    float: left;
 }
 
-.show-tools{
+.btn{
+    color: #fff;
+    padding: 0.2rem;
+    width: 5rem;
+    border-radius: 1rem;
+    border-style: ridge;
+    background-color: rgba(40, 130, 158, 0.336);
+    border-color:rgb(0, 204, 255)
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: rgb(0, 204, 255);
+    transition-duration: 100ms;
+}
+
+
+#show-tools{
     display: flex;
     justify-content: space-between;
     grid-row: 3;
@@ -223,8 +243,7 @@ html, body {
     z-index: 10;
     margin-right: 2rem;
 }
-
-.show-tools ul li {
+#show-tools ul li {
     color: #fff;
     line-height: 2.2em;
     list-style: none;

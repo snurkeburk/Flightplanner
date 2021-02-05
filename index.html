@@ -6,11 +6,11 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="scripts/main.js"></script>
     <script src="scripts/cookies.js"></script>
+    <script src="scripts/buttons.js"></script>
+
         <title>Flightplanner</title>
 </head>
 <body>
-
-    
     <header class="logo-header">
         <img alt="logo-globe" src="pictures/logo-white.png" id="logo">
     </header>
@@ -65,13 +65,13 @@
     
     <section class="tools"> 
         <ul>
-        <li>switch</li>
-        <li>help</li>
-        <button>clear</button>
-        <button>hide coords</button>
+        <button class="btn">Help</button>
+        <button onclick="refresh()" class="btn">Refresh</button>
+        <button onclick="hide()" class="btn">Show/hide coords</button>
         </ul>
+
     </section>
-    <section class="show-tools">
+    <section id="show-tools">
         <ul class="ul-dep-big">
             <li id="show-tools-exp">Departure</li>
             <li id="dev-dep-big">[XXXX]</li>
@@ -94,20 +94,6 @@
             <li id="dev-arr-big">[XXXX]</li>
             <li id="coordsx2-big">X2</li>
             <li id="coordsy2-big">Y2</li>
-        </ul>
-
-    </section>
-    <section class="dev">
-        <ul class="ul-dep">
-            <li id="dev-dep">[XXXX]</li>
-            <li id="coordsx1">X1</li>
-            <li id="coordsy1">Y1</li>
-            <li id="c-value">C</li>
-        </ul>
-        <ul class="ul-arr">
-            <li id="dev-arr">[XXXX]</li>
-            <li id="coordsx2">X2</li>
-            <li id="coordsy2">Y2</li>
         </ul>
 
     </section>

@@ -237,13 +237,7 @@ if (c > 600) {
 
 
 // show values in "devbox"
-let printx1 = document.getElementById('coordsx1');
-let printdep = document.getElementById('dev-dep');
-let printarr = document.getElementById('dev-arr');
-let printy1 = document.getElementById('coordsy1');
-let printx2 = document.getElementById('coordsx2');
-let printy2 = document.getElementById('coordsy2');
-let printc = document.getElementById('c-value');
+
 let printx1Big = document.getElementById('coordsx1-big');
 let printdepBig = document.getElementById('dev-dep-big');
 let printarrBig = document.getElementById('dev-arr-big');
@@ -252,13 +246,6 @@ let printx2Big = document.getElementById('coordsx2-big');
 let printy2Big = document.getElementById('coordsy2-big');
 let printcBig = document.getElementById('c-value-big');
 
-printdep.innerHTML = depname;
-printarr.innerHTML = arrname;
-printx1.innerHTML = divOffset.left;
-printy1.innerHTML = divOffset.top;
-printx2.innerHTML = divsecondOffset.left;
-printy2.innerHTML = divsecondOffset.top;
-printc.innerHTML = c;
 printdepBig.innerHTML = depname;
 printarrBig.innerHTML = arrname;
 printx1Big.innerHTML = divOffset.left;
