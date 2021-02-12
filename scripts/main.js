@@ -139,7 +139,6 @@ if (c > 600) {
             var aa = divOffset.left - newdivsecondOffset.left;
             var ba = divOffset.top - newdivsecondOffset.top;
             var ca = Math.sqrt( aa*aa + ba*ba );
-            
             var ab = divOffset.left - newdivsecondOffset.left;
             var bb = divOffset.top - newdivsecondOffset.top;
             var cb = Math.sqrt( ab*ab + bb*bb );
@@ -263,7 +262,7 @@ function randomRoute() {
     var departure = airports[randomDeparture];
     document.getElementById('dep').value = departure;
     document.getElementById(departure).style.backgroundColor = "lightgreen";   
-    var randomArrival = Math.floor(Math.random() * airports.length);
+    let randomArrival = Math.floor(Math.random() * airports.length);
     var arrival = airports[randomArrival];
     document.getElementById('arr').value = arrival;
     document.getElementById(arrival).style.backgroundColor = "lightgreen";   
@@ -277,3 +276,58 @@ function randomRoute() {
 }
 
 
+function mainChart(){
+        let randomNummer = [];
+        for (let i = 0; i< 10; i++){
+            let rnd = Math.floor(Math.random() * 10);
+            randomNummer.push(rnd);
+        }
+        randomNummer.sort((a,b)=>a-b);
+        console.table(randomNummer);
+    
+        const ctx = document.getElementById('chart').getContext('2d');        
+        const myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['', '10%', '20%', '30%', '40%', '50%','60%','70%','80%','90%','100%'],
+                datasets: [{
+                    label: 'Altitude',
+                    data: randomNummer,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        
+                    ],
+                    borderColor: [
+                        'rgba(0, 204, 255,1);',
+                        'rgba(40, 130, 158, 1)',
+                        'rgba(40, 130, 158, 1)',
+                        'rgba(40, 130, 158, 1)',
+                        'rgba(40, 130, 158, 1)',
+                        'rgba(40, 130, 158, 1)',
+                        'rgba(40, 130, 158, 1)',
+                        'rgba(40, 130, 158, 1)',
+                        'rgba(40, 130, 158, 1)',
+                        'rgba(40, 130, 158, 1)',            
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            
+                            
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+        
+    }
