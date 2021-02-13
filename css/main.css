@@ -224,12 +224,12 @@ html, body {
     transition-duration: 100ms;
 }
 
-.charts {
-    width: 50%;
-    position: relative;
-    grid-row: 3;
-    grid-column-start: 1;
-    grid-column-end: 3;
+.lol {
+    right: 5em;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
 }
 #show-tools{
     display: flex;

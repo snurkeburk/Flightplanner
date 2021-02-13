@@ -276,31 +276,35 @@ function randomRoute() {
 }
 
 
-function mainChart(){
+function climbChart(){
         let randomNummer = [];
-        for (let i = 0; i< 10; i++){
-            let rnd = Math.floor(Math.random() * 10);
+        for (let i = 0; i< 11; i++){
+            let rnd = Math.floor(Math.random() * 30);
             randomNummer.push(rnd);
         }
         randomNummer.sort((a,b)=>a-b);
         console.table(randomNummer);
-    
+        
         const ctx = document.getElementById('chart').getContext('2d');        
         const myChart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: ['', '10%', '20%', '30%', '40%', '50%','60%','70%','80%','90%','100%'],
+                labels: ['T/O', '1nm', '10nm', '20nm', '30nm', '40nm','50nm','60nm','70nm','80nm','TOC'],
                 datasets: [{
-                    label: 'Altitude',
+                    label: 'Climb in feet (*10^4)',
                     data: randomNummer,
                     backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(40, 130, 158, 0.1)',
                         'rgba(54, 162, 235, 0.2)',
                         'rgba(255, 206, 86, 0.2)',
                         'rgba(75, 192, 192, 0.2)',
                         'rgba(153, 102, 255, 0.2)',
                         'rgba(255, 159, 64, 0.2)',
-                        
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(0, 255, 64, 1.2)',                   
                     ],
                     borderColor: [
                         'rgba(0, 204, 255,1);',
@@ -314,7 +318,68 @@ function mainChart(){
                         'rgba(40, 130, 158, 1)',
                         'rgba(40, 130, 158, 1)',            
                     ],
-                    borderWidth: 1
+                    borderWidth: 2
+                }]
+            },
+            options: {
+
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+        
+    }
+
+
+    function decendChart(){
+        let randomNummer = [];
+        for (let i = 0; i< 11; i++){
+            let rnd = Math.floor(Math.random() * 30);
+            randomNummer.push(rnd);
+        }
+        randomNummer.sort((a,b)=>b-a);
+        console.table(randomNummer);
+
+        const ctx2 = document.getElementById('decendChart').getContext('2d');        
+        const myChart2 = new Chart(ctx2, {
+            type: 'line',
+            data: {
+                labels: ['TOD', '80nm', '70nm', '60nm', '50nm', '40nm','30nm','20nm','10nm','1nm','Arrival'],
+                datasets: [{
+                    label: 'Decend in feet (*10^4)',
+                    data: randomNummer,
+                    backgroundColor: [
+                        'rgba(40, 130, 158, 0.1)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(0, 255, 64, 1.2)',                   
+                    ],
+                    borderColor: [
+                        'rgba(0, 204, 255,1);',
+                        'rgba(40, 130, 158, 1)',
+                        'rgba(40, 130, 158, 1)',
+                        'rgba(40, 130, 158, 1)',
+                        'rgba(40, 130, 158, 1)',
+                        'rgba(40, 130, 158, 1)',
+                        'rgba(40, 130, 158, 1)',
+                        'rgba(40, 130, 158, 1)',
+                        'rgba(40, 130, 158, 1)',
+                        'rgba(40, 130, 158, 1)',            
+                    ],
+                    borderWidth: 2
                 }]
             },
             options: {
@@ -323,7 +388,6 @@ function mainChart(){
                         ticks: {
                             
                             
-                            beginAtZero: true
                         }
                     }]
                 }
