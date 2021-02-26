@@ -12,7 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
         <title>Flightplanner</title>
 </head>
-<body >
+<body>
     <header class="logo-header">
         <img alt="logo-globe" src="pictures/logo-white.png" id="logo">
     </header>
@@ -20,9 +20,9 @@
     <div class="div">
         <div class="input-container">
         <label for="dep">Departure airport</label>
-        <input type="text" id="dep" value = "KLAS" name="dep" placeholder="ICAO"><br><br>
+        <input type="text" id="dep" name="dep" placeholder="ICAO"><br><br>
         <label for="arr">Arrival airport</label>
-        <input type="text" id="arr" value="VIDP" name="arr" placeholder="ICAO"><br><br>
+        <input type="text" id="arr" name="arr" placeholder="ICAO"><br><br>
         <label for="cars">Airline</label>
         <select name="airlines" id="airlines">
             <option value="SAS">SAS</option>
@@ -67,12 +67,57 @@
     
     <section class="tools"> 
         <ul>
-        <button class="btn">Help</button>
+        <button class="btn" onclick="help()" id="helpBtn">Help</button>
         <button onclick="refresh()" class="btn">Refresh</button>
         <button onclick="hide()" class="btn">Show/hide coords</button>
         </ul>
 
+
+        
     </section>
+    <div id="help">
+        <button class="btn" id="helpClose" onclick="help()">Close</button>
+        <ul>
+            <li>
+                <h4 class="howToTopSpaceBig">This is a website that visually represents how a flight path might look like.
+                </h4>
+                <p class="howToTopSpace">The airports are accuratly located on the map, however it does not include 
+                    real-life flight routes, but rather a curve to represent the curvature of the earth
+                    and how the plane flies on long distance flights.
+                </p>
+                <h4 class="howToTopSpaceBig">About the information shown:</h4>
+                <p class="howToTopSpace">The coordinates are not real, they were simply printed to gather information when
+                    developing the website and are shown for fun.
+                </p>
+                <p>The value "C" stands for the distance between the two points</p>
+                <p>The two graphs above the map show the altitude relative to the distance to
+                    and from the airport (ascent stage and decent stage). It is shown in ft (feet) and Nm (nautical miles).
+                </p>
+                <p>The four letters which represent the airports are called "ICAO codes", every airport has a unique ICAO code 
+                    and the letters depend on where the airport is located.
+                </p>
+                <p>If a route is red, it means that the distance is too far and a stopover is required.
+                    It will automatically generate an alternate route with a stopover shown with a 
+                    green dashed line.
+                </p> 
+                <h4 class="howToTopSpaceBig">How to use:</h4>
+            </li>
+            <div id="howToDep">
+            <p class="howToSpacing">1. Enter a ICAO code for the desired </p><p class="howToSpacingCurve"> departure</p><p> airport.</p>
+            </div>
+            
+            <div id="howToArr">
+            <p class="howToSpacing">2. Enter a ICAO code for the desired </p><p class="howToSpacingCurve"> arrival</p><p> airport.</p>
+            </div>
+            <p>3. Press the green checkmark button to generate the route!</p>
+            <p>The yellow button generates a random route each time you press it.</p>
+            <p>Press the "refresh" button to clear all lines. Or refresh the site the standard way.</p>
+            <p>Press "Close" at the top of the screen to hide this text. You can view this again by pressing
+                the help button on the left.
+            </p>
+        </ul>
+
+    </div>
     <section id="show-tools">
         <ul class="ul-dep-big">
             <li id="show-tools-exp">Departure</li>

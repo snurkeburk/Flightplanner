@@ -4,3 +4,5 @@ landning) KLAR
 
 
 -Fixa så att TOC och TOD är samma höjd.
+
+-Göra kurvor på linjer beroende på nord eller syd av jorden
